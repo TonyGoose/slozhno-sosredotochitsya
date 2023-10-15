@@ -4,9 +4,140 @@
   переключая тему
 */
 
+:root .theme_dark {
+  --text-background-color: #ff0070;
+  --text-color: #f1b2ce;
+  --title-text-color: #db00ff;
+  --decoration-accent-color: #ff0070;
+  --text-accent-color: #000028;
+}
+
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
+    /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  background-image: url(../images/cover-image-dark.png);
 }
+
+.page.theme_dark .header__item-only-dark {
+  position: absolute;
+  color: var(--decoration-accent-color);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  top: 20px;
+  right: 48px;
+}
+
+.header__item-only-dark {
+  text-transform: uppercase;
+}
+
+.header__item-only-dark::after {
+  content: "";
+  position: absolute;
+  background-color: var(--decoration-accent-color, #FF0070);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  top: 8px;
+  left: 42px;
+  box-shadow: 0 0 4px 2px var(--decoration-accent-color, #FF0070);
+}
+
+.theme_dark .header__text {
+  color: var(--text-accent-color);
+}
+
+.theme_dark .header__theme-menu-button {
+  color: var(--decoration-accent-color);
+}
+
+.theme_dark .section__title {
+  color: var(--decoration-accent-color);
+}
+
+.theme_dark .section__content-title {
+  color: var(--text-accent-color);
+}
+
+.theme_dark .section__content-subtitle {
+  color: var(--text-accent-color);
+}
+
+@media (max-width: 375px) {
+  .page.theme_dark .header__item-only-dark {
+    top: 10px;
+    right: 40px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page.theme_auto {
+    background-image: url(../images/cover-image-dark.png);
+  }
+
+  .page.theme_auto .header__item-only-dark {
+    position: absolute;
+    color: var(--decoration-accent-color);
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    top: 20px;
+    right: 48px;
+  }
+
+  .header__item-only-dark {
+    text-transform: uppercase;
+  }
+
+  .header__item-only-dark::after {
+    content: "";
+    position: absolute;
+    background-color: var(--decoration-accent-color);
+    width: 10px;
+    height: 10px;
+    border-radius: 90%;
+    top: 8px;
+    left: 40px;
+    box-shadow: 0 0 10px var(--decoration-accent-color);
+  }
+
+  .theme_auto .header__text {
+    color: var(--text-accent-color);
+  }
+
+  .theme_auto .header__theme-menu-button {
+    color: var(--decoration-accent-color);
+  }
+
+  .theme_auto .section__title {
+    color: var(--decoration-accent-color);
+  }
+
+  .theme_auto .section__content-title {
+    color: var(--text-accent-color);
+  }
+
+  .theme_auto .section__content-subtitle {
+    color: var(--text-accent-color);
+  }
+}
+
+@media (prefers-color-scheme: dark) and (375px <= width <=768px) {
+  .theme_auto .header__title {
+    --accent-color: #ff0070;
+  }
+
+  .theme_auto .footer__title {
+    --accent-color: #ff0070;
+  }
+}
+
