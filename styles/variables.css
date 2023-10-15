@@ -22,10 +22,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root .theme_auto {
-    --text-background-color: #ff0070;
     --text-color: #f1b2ce;
     --title-text-color: #db00ff;
-    --decoration-accent-color: #ff0070;
+    --text-background-color: #ff0070;
     --text-accent-color: #000028;
+    --decoration-accent-color: #ff0070;
   }
 }
