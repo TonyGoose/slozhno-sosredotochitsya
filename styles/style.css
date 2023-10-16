@@ -357,7 +357,7 @@
     gap: 20px;
   }
 
-  .section__pictures-content {
+  .section__images-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -419,7 +419,11 @@
     gap: 20px;
   }
 
-  .section__images {
+  .section__images{
+    gap: 10px;
+  }
+
+  .section__images-content {
     gap: 10px;
   }
 
