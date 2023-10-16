@@ -360,7 +360,7 @@
   .section__images-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 }
 
